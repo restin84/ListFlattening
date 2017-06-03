@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ListFlattening {
   public class LinkedList<T> {
-    private ListElement<T> head;
-    private ListElement<T> tail;
+    public ListElement<T> head { get; set; }
+    public ListElement<T> tail { get; set; }
     public int Count { get; set; }
     public LinkedList() {}
 
@@ -50,6 +50,15 @@ namespace ListFlattening {
         tail = newElement;
       }
       Count++;
+    }
+
+    public void Print() {
+      ListElement<T> currentElement = head;
+      while(currentElement.Next != null) {
+        Console.Write(currentElement.Data + " ");
+        currentElement = currentElement.Next;
+      }
+      Console.Write(currentElement.Data + " ");
     }
   }
 }

@@ -9,7 +9,7 @@ namespace ListFlattening {
     public T Data { get; private set; }
     public ListElement<T> Previous { get; set; }
     public ListElement<T> Next { get; set; }
-    public LinkedList<T> Child { get; set; }
+    public ListElement<T> Child { get; set; }
     
     public ListElement(T data) {
       Data = data;
