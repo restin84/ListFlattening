@@ -56,7 +56,10 @@ namespace ListFlattening {
       //if(ListFlattener.FlattenList(list1.head) == null) {
       //  var pause = 0;
       //}
-      LinkedList<int> result = ListFlattener.FlattenList(list1.head);
+      //LinkedList<int> result = ListFlattener.FlattenList(list1.head);
+      //result.Print();
+      ListFlattener<int> listFlattener = new ListFlattener<int>();
+      LinkedList<int> result = listFlattener.FlattenList(list1.head);
       result.Print();
 
       Console.ReadLine();
