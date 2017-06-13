@@ -58,9 +58,11 @@ namespace ListFlattening {
       //}
       //LinkedList<int> result = ListFlattener.FlattenList(list1.head);
       //result.Print();
-      ListFlattener<int> listFlattener = new ListFlattener<int>();
-      LinkedList<int> result = listFlattener.FlattenList(list1.head);
-      result.Print();
+      //ListFlattener<int> listFlattener = new ListFlattener<int>();
+      //LinkedList<int> result = listFlattener.TraverseAndAddFlatten(list1.head);
+      //result.Print();
+      list1.FlattenList();
+      list1.Print();
 
       Console.ReadLine();
     }

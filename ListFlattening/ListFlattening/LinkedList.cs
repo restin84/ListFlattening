@@ -52,6 +52,26 @@ namespace ListFlattening {
       Count++;
     }
 
+    public void FlattenList() {
+      ListElement<T> currentElement = head;
+      while(currentElement != null) {
+        if(currentElement.Child != null) {
+          Append(currentElement.Child);
+        }
+        currentElement = currentElement.Next;
+      }
+    }
+
+    public void Append(ListElement<T> child) {
+      tail.Next = child;
+      child.Previous = tail;
+      ListElement<T> currentElement = child;
+      while(currentElement.Next != null) {
+        currentElement = currentElement.Next;
+      }
+      tail = currentElement;
+    }
+
     public void Print() {
       ListElement<T> currentElement = head;
       while(currentElement.Next != null) {
